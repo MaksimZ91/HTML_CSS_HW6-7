@@ -22,6 +22,7 @@ img {
   background: #222;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 75px;
 }
 .header_navigation {
@@ -137,6 +138,11 @@ img {
   grid-column-end: 4;
   position: relative;
 }
+.offer_card_acces_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 .offer_card_acces_wrapper {
   position: absolute;
   width: 100%;
@@ -206,6 +212,7 @@ img {
   padding: 25px 16px;
   display: flex;
   flex-direction: column;
+  background: #F8F8F8;
   gap: 16px;
 }
 .poducts_wrapper_card_content_titel {
@@ -293,5 +300,83 @@ img {
   .poducts_wrapper {
     grid-template-columns: repeat(2, 360px);
     gap: 16px;
+  }
+}
+@media (max-width: 767px) and (min-width: 319px) {
+  .header_navigation {
+    width: 375px;
+    margin: 0 16px;
+  }
+  .header_navigation_menu {
+    width: 32px;
+  }
+  .header_navigation_menu_link:nth-child(2), .header_navigation_menu_link:nth-child(3) {
+    display: none;
+  }
+  .brand_wrapper {
+    width: 375px;
+    height: 363px;
+    justify-content: center;
+  }
+  .brand_wrapper_img {
+    display: none;
+  }
+  .brand_wrapper_titel_head {
+    font-size: 38px;
+  }
+  .brand_wrapper_titel_content_text {
+    font-size: 16px;
+  }
+  .brand_wrapper_titel_content_fashion {
+    font-size: 24px;
+  }
+  .offer {
+    width: 375px;
+    gap: 32px;
+    margin: 64px auto;
+    justify-content: center;
+    grid-template-columns: 343px;
+  }
+  .offer_card_woman, .offer_card_man, .offer_card_child {
+    width: 343px;
+    height: 248px;
+    grid-column: 1;
+  }
+  .offer_card_acces {
+    width: 343px;
+    height: 111px;
+    grid-column: 1;
+  }
+  .offer_card_acces_img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .brand_wrapper {
+    width: 375px;
+    height: 363px;
+    justify-content: center;
+  }
+  .brand_wrapper_img {
+    display: none;
+  }
+  .brand_wrapper_titel_head {
+    font-size: 38px;
+  }
+  .brand_wrapper_titel_content_text {
+    font-size: 20px;
+  }
+  .brand_wrapper_titel_content_fashion {
+    font-size: 20px;
+  }
+  .poducts {
+    margin: 64px auto 85px;
+    width: 375px;
+  }
+  .poducts_header {
+    gap: 3px;
+    margin-bottom: 40px;
+  }
+  .poducts_wrapper {
+    grid-template-columns: 358px;
   }
 }/*# sourceMappingURL=style.css.map */

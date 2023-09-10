@@ -22,6 +22,7 @@ img{
   background: #222;  
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 75px;
   &_navigation{
     width: 1140px;
@@ -136,6 +137,12 @@ img{
       grid-column-start: 1;
       grid-column-end: 4;
       position: relative;  
+      &_img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+      }
       &_wrapper{
         position: absolute;
         width: 100%;
@@ -206,6 +213,7 @@ img{
             padding: 25px 16px;
             display: flex;
             flex-direction: column;
+            background: #F8F8F8;
             gap:16px;
             &_titel{
               color: #000;
@@ -304,6 +312,100 @@ img{
     &_wrapper{
       grid-template-columns: repeat(2, 360px);
       gap:16px;
+    }
+  }
+}
+
+@media(max-width:767px) and (min-width:319px){
+  .header{
+    &_navigation{
+      width: 375px;
+      margin: 0 16px; 
+      &_menu{
+        width: 32px;
+        &_link:nth-child(2),  &_link:nth-child(3){
+          display: none;
+        }
+      }
+    }
+  }
+  .brand{
+    &_wrapper{
+      width: 375px; 
+      height: 363px; 
+      justify-content: center;   
+      &_img{
+        display: none;
+      }  
+      &_titel{
+        &_head{
+          font-size: 38px;
+        }
+        &_content{
+          &_text{
+            font-size: 16px;
+          }
+          &_fashion{
+            font-size: 24px;
+          }
+        }       
+      }    
+    }
+  }
+
+  .offer{
+    width: 375px;
+    gap: 32px;
+    margin: 64px auto;     
+    justify-content: center;  
+    grid-template-columns: 343px; 
+    &_card_woman, &_card_man, &_card_child{
+      width: 343px;
+      height: 248px;
+      grid-column: 1;
+    }
+    &_card_acces{
+      width: 343px;
+      height: 111px;
+      grid-column: 1;
+      &_img{
+        object-fit: cover;
+
+      }
+    }
+  }
+   .brand{
+    &_wrapper{
+      width: 375px; 
+      height: 363px; 
+      justify-content: center;   
+      &_img{
+        display: none;
+      }  
+      &_titel{
+        &_head{
+          font-size: 38px;
+        }
+        &_content{
+          &_text{
+            font-size: 20px;
+          }
+          &_fashion{
+            font-size: 20px;
+          }
+        }       
+      }    
+    }   
+  }
+  .poducts{
+    margin: 64px auto 85px; 
+    width: 375px;
+    &_header{
+      gap:3px;
+      margin-bottom: 40px;
+    }
+    &_wrapper{
+      grid-template-columns: 358px;    
     }
   }
 }
